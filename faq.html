@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Studio Sascha – Veelgestelde vragen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+   <style>
+    :root {
+      --ss-bg-dark: #2e2e2e;
+      --ss-text-light: #faf7f3;
+      --ss-light: #faf7f3;
+      --ss-beige-mid: #e7dccb;
+      --ss-white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background-color: var(--ss-bg-dark);
+      color: var(--ss-text-light);
+    }
+
+    .ss-faq-section {
+      padding: 56px 16px 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ss-faq-inner {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    /* Titel */
+    .ss-faq-heading {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 34px;
+      line-height: 1.3;
+      font-family: "Playfair Display", serif;
+      color: var(--ss-text-light);
+    }
+
+    /* Subtekst */
+    .ss-faq-subtitle {
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto 40px;
+      color: var(--ss-text-light);
+    }
+
+    /* Accordion container */
+    .ss-faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* FAQ item */
+    .ss-faq-item {
+      background-color: #faf7f3;
+      border-radius: 14px;
+      border: 1px solid var(--ss-beige-mid);
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+    }
+
+    .ss-faq-toggle { display: none; }
+
+    .ss-faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 18px 22px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #2e2e2e;
+      background-color: #faf7f3;
+      font-family: "Inter", sans-serif;
+      transition: background-color 0.25s ease;
+    }
+
+    .ss-faq-question:hover {
+      background-color: var(--ss-beige-mid);
+    }
+
+    /* Arrow icon */
+    .ss-faq-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #2e2e2e;
+      transition: transform 0.25s ease;
+    }
+
+    /* Answer */
+    .ss-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 22px;
+      transition: max-height 0.3s ease, padding-bottom 0.3s ease;
+      background-color: #faf7f3;
+    }
+
+    .ss-faq-answer p {
+      margin: 16px 0 22px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #2e2e2e;
+    }
+
+    /* When opened */
+    .ss-faq-toggle:checked ~ .ss-faq-answer {
+      max-height: 500px;
+      padding-bottom: 20px;
+    }
+
+    .ss-faq-toggle:checked + .ss-faq-question .ss-faq-icon {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="ss-faq-section">
+    <div class="ss-faq-inner">
+
+      <h1 class="ss-faq-heading">Veelgestelde vragen</h1>
+      <p class="ss-faq-subtitle">
+        Twijfel je welk traject het beste past, hoe het proces verloopt of wat je kunt verwachten? 
+        Hieronder vind je antwoorden op de meestgestelde vragen over mijn werkwijze en trajecten.
+      </p>
+
+      <div class="ss-faq-accordion">
+
+        <!-- FAQ 1 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq1" class="ss-faq-toggle">
+          <label for="faq1" class="ss-faq-question">
+            Hoe weet ik welk traject het beste bij mij past?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Tijdens een kennismaking onderzoeken we jouw doelen, huidige situatie en gewenste uitstraling. 
+              Zo bepalen we welk traject het beste aansluit. Soms combineren we 
+              <strong>Website Basis Traject</strong>, 
+              <strong>Website Premium Traject</strong> 
+              of 
+              <strong>Website Optimalisatie Traject</strong>
+              voor een optimaal resultaat.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq2" class="ss-faq-toggle">
+          <label for="faq2" class="ss-faq-question">
+            Moet ik al teksten en afbeeldingen aanleveren voordat we starten?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Nee, dat hoeft niet. In het <strong>Website Premium Traject</strong> verzorg ik ook contentontwikkeling. 
+              In de andere trajecten begeleid ik je met een contentchecklist en duidelijke structuur.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq4" class="ss-faq-toggle">
+          <label for="faq4" class="ss-faq-question">
+            Hoe lang duurt een traject gemiddeld?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Gemiddeld:
+              6–8 weken voor het <strong>Website Premium Traject</strong>, 
+              4–6 weken voor het <strong>Website Basis Traject</strong>, 
+              1–3 weken voor een <strong>Website Optimalisatie Traject</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq5" class="ss-faq-toggle">
+          <label for="faq5" class="ss-faq-question">
+            Kan ik later opschalen naar een groter traject?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Zeker! Veel klanten starten met het <strong>Website Basis Traject</strong> 
+              of het <strong>Website Optimalisatie Traject</strong> 
+              en groeien via het <strong>Website Premium Traject</strong> door naar een 
+              <strong>Online Marketing Traject</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq6" class="ss-faq-toggle">
+          <label for="faq6" class="ss-faq-question">
+            Kan ik overstappen vanaf platforms zoals Wix of Shopify?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Absoluut. In het <strong>Website Overstap Traject</strong> help ik je overstappen vanaf Wix, Shopify, Jimdo, Squarespace en oude WordPress-installaties.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq7" class="ss-faq-toggle">
+          <label for="faq7" class="ss-faq-question">
+            Kan ik mijn website zelf bijhouden na oplevering?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Ja! Je krijgt volledige toegang tot jouw WordPress-omgeving. 
+              Wil je onderhoud uitbesteden? Dan past het <strong>Website Onderhoud Traject</strong> perfect.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="ss-faq-item">
+          <input type="checkbox" id="faq8" class="ss-faq-toggle">
+          <label for="faq8" class="ss-faq-question">
+            Wat als ik geen idee heb wat er op mijn website moet komen te staan?
+            <span class="ss-faq-icon">➔</span>
+          </label>
+          <div class="ss-faq-answer">
+            <p>
+              Geen zorgen. In elk traject begeleid ik je met structuur, helderheid en richting. 
+              In het <strong>Website Premium Traject</strong> neem ik zelfs de teksten voor je uit handen.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
